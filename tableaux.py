@@ -94,7 +94,11 @@ def no_literales(l):
 	# solo literales
 	# Input: l, una lista de fórmulas como árboles
 	# Output: None/f, tal que f no es literal
-	return False
+    for h in l:
+        if not es_literal(h):
+            print(Inorder(h),"No es literal!")
+            return True
+    return False
 
 def clasifica_y_extiende(f):
 	# clasifica una fórmula como alfa o beta y extiende listaHojas
