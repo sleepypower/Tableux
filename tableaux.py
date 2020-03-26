@@ -83,7 +83,8 @@ def es_literal(f):
     if f.right == None:
         return True
     elif f.label == "-":
-        return es_literal(f.right)
+        print(f.right.label)
+        return not (f.right).label in ["-","Y","O","<",">","<>"] 
     else:
         return False
 	
