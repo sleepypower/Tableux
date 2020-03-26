@@ -94,7 +94,7 @@ def Tableaux(f):
 	global listaHojas
 	global listaInterpsVerdaderas
 
-	A = string2Tree(f)
+	A = StringtoTree(f)
 	listaHojas = [[A]]
 
 	return listaInterpsVerdaderas
