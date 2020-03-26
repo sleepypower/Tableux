@@ -63,6 +63,17 @@ def par_complementario(l):
 	# contiene un par complementario
 	# Input: l, una lista de literales
 	# Output: True/False
+    for literal_1 in l:
+        if len(literal_1) == 1:
+            buscar = "-" + literal_1
+        else:
+            buscar = literal_1[1]
+        for literal_2 in l:
+            if literal_2 == buscar:
+                #Quitar el comment al print para verificar cual es el primer par complementario que se encuentra
+                #print(literal_1,buscar) 
+                return True
+    
 	return False
 
 def es_literal(f):
